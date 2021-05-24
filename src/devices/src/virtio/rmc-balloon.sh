@@ -13,9 +13,9 @@ for j in *.json; do
 done
 
 # Two versions of vm_memory are compiled
-# We remove the one that does not include 'dirty_bitmap'
+# We remove the one that overrides the implementation
 for vmm_version in vm_memory-*.json; do
-    if [ $(grep 'dirty_bitmap' ${vmm_version} | wc -l) -eq 0 ]; then
+    if [ $(grep 'dirty_bitmap' ${vmm_version} | wc -l) -gt 0 ]; then
         rm ${vmm_version}.out
     fi
 done
