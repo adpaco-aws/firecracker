@@ -6,6 +6,7 @@ pub mod event_handler;
 pub mod persist;
 pub mod request;
 pub mod test_utils;
+pub mod rmc_harness;
 
 pub use self::device::{Block, CacheType};
 pub use self::event_handler::*;
