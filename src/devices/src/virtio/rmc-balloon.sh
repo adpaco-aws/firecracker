@@ -23,4 +23,4 @@ done
 touch empty.c
 goto-cc --function rmc_compact_harness empty.c *.out -o balloon-all.out
 goto-instrument --drop-unused-functions balloon-all.out balloon.out
-(time cbmc balloon.out --object-bits 11 --unwind 4 --unwinding-assertions --pointer-check --external-sat-solver ~/kissat/build/kissat)
+(time cbmc balloon.out --object-bits 11 --unwind 4 --unwinding-assertions --pointer-check --stop-on-fail --external-sat-solver ~/kissat/build/kissat)
